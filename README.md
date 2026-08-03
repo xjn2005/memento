@@ -13,7 +13,7 @@ Echo 是一款本地优先的 Android 未来记忆工具。记录当下的一句
 
 ## 本地运行
 
-需要 Android Studio（或命令行 Android SDK）、JDK 17 至 23，以及一个 Android 35 平台：
+需要 Android Studio（或命令行 Android SDK）、JDK 21，以及一个 Android 35 平台：
 
 ```powershell
 .\gradlew.bat :app:assembleDebug
