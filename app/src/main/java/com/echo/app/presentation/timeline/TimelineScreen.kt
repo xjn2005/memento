@@ -37,7 +37,7 @@ fun TimelineScreen(onMemoryClick: (String) -> Unit) {
     val model: TimelineViewModel = viewModel(factory = viewModelFactory { initializer { TimelineViewModel(app) } })
     val memories by model.memories.collectAsState()
     val groups = memories.groupBy { "${yearOf(it.createdAt)} ${monthOf(it.createdAt)}" }
-    Column(Modifier.fillMaxSize().padding(horizontal = 24.dp, vertical = 24.dp)) {
+    Column(Modifier.fillMaxSize().padding(horizontal = 24.dp, vertical = 20.dp)) {
         Text("时光", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.SemiBold)
         Text("留给未来的片段", style = MaterialTheme.typography.bodyLarge, color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(top = 7.dp, bottom = 18.dp))
         LazyColumn(verticalArrangement = Arrangement.spacedBy(12.dp)) {

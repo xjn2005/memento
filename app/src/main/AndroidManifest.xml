@@ -4,7 +4,9 @@
     <application
         android:name=".EchoApplication"
         android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
         android:label="Echo"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@android:style/Theme.Material.NoActionBar">
         <activity
             android:name=".MainActivity"

@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
@@ -29,16 +30,19 @@ fun EchoScaffold(navController: NavHostController, content: @Composable (Padding
         bottomBar = {
             if (route?.startsWith(Destination.Recall) != true) {
                 Box(
-                    modifier = Modifier.fillMaxWidth().padding(horizontal = 22.dp, vertical = 14.dp),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .navigationBarsPadding()
+                        .padding(horizontal = 20.dp, vertical = 12.dp),
                     contentAlignment = Alignment.Center,
                 ) {
                     Surface(
-                        shape = RoundedCornerShape(28.dp),
+                        shape = RoundedCornerShape(30.dp),
                         color = MaterialTheme.colorScheme.surface,
                         shadowElevation = 10.dp,
                     ) {
                         Row(
-                            modifier = Modifier.padding(5.dp),
+                            modifier = Modifier.padding(8.dp),
                             horizontalArrangement = Arrangement.spacedBy(4.dp),
                         ) {
                             listOf(
@@ -57,9 +61,9 @@ fun EchoScaffold(navController: NavHostController, content: @Composable (Padding
                                     },
                                     modifier = Modifier.background(
                                         color = if (selected) MaterialTheme.colorScheme.secondaryContainer else MaterialTheme.colorScheme.surface,
-                                        shape = RoundedCornerShape(22.dp),
+                                        shape = RoundedCornerShape(24.dp),
                                     ),
-                                    contentPadding = PaddingValues(horizontal = 18.dp, vertical = 11.dp),
+                                    contentPadding = PaddingValues(horizontal = 18.dp, vertical = 14.dp),
                                 ) {
                                     Text(
                                         text = label,

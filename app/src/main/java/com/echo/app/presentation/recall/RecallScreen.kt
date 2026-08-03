@@ -43,7 +43,7 @@ fun RecallScreen(memoryId: String, onFinished: () -> Unit) {
 
     AnimatedVisibility(visible = true, enter = fadeIn()) {
         Column(
-            modifier = Modifier.fillMaxSize().padding(horizontal = 24.dp, vertical = 18.dp),
+            modifier = Modifier.fillMaxSize().padding(horizontal = 24.dp, vertical = 20.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
             Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
@@ -73,7 +73,7 @@ private fun RecallAction(label: String, isPrimary: Boolean = false, onClick: () 
     Surface(
         modifier = Modifier.fillMaxWidth(),
         onClick = onClick,
-        shape = RoundedCornerShape(18.dp),
+        shape = RoundedCornerShape(24.dp),
         color = if (isPrimary) MaterialTheme.colorScheme.secondaryContainer else MaterialTheme.colorScheme.surface,
         border = BorderStroke(1.dp, if (isPrimary) MaterialTheme.colorScheme.secondaryContainer else MaterialTheme.colorScheme.outlineVariant),
     ) {

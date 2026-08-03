@@ -47,7 +47,7 @@ fun TodayScreen(onRecall: (String) -> Unit, onFirstMemorySaved: () -> Unit) {
     val date = remember { LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy年M月d日")) }
 
     Column(
-        modifier = Modifier.fillMaxSize().padding(horizontal = 28.dp, vertical = 20.dp),
+        modifier = Modifier.fillMaxSize().padding(horizontal = 24.dp, vertical = 20.dp),
         verticalArrangement = Arrangement.spacedBy(0.dp),
     ) {
         Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
